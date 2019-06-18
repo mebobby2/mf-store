@@ -7,6 +7,16 @@
 ## Integration Options
 ### Backend (git branch integration-backend)
 Use the back-end to fetch the other apps. We are using an express server, but a more robust way is to use nginx SSI.
+The problem with this approach is if one of the microservices takes a long time to load - it will hold up the entire page.
+
+### iFrame (git branch integration-iframe)
+Solves the problem of a slow service holding the entire page up. However, the bad part is that you cannot share the stylesheet,loaded libraries, communication will be harder, etc,
+
+### Client Side JS (integration-client-side-js)
+Loads the UI for each microservice using Ajax on the browser. Also solves the problem of a slow service holding the entire page up. However, because it's client side rendering, you may lose SEO. However, Google SEO Crawler is getting better at processing JS these days...
+
+### Progressively stream content to browser (integration-progressive-loading-backend)
+Send chunks of data from the server as it loads them from each of the microservices. The bad part is that they have to load in order, different from the previous example were the cart would load before the products list.
 
 ## Notes
 ### create-react-app Commands
@@ -32,4 +42,6 @@ npm packages for this to work:
 Alias for ```NODE_ENV=production node server.js```. We are are just runing server.js with node. Notice we are not transpiling server.js in anyway, so if you look inside server.js, we are not using ES6 imports (import example from 'example') but using CommonJS imports (const package = require('module-name')) which is the standard used by node for working with modules.
 
 ## Upto
-https://medium.com/@_rchaves_/building-microfrontends-part-ii-joining-apps-together-dfa1b6f17d3e
+https://medium.com/@_rchaves_/building-microfrontends-part-iii-public-path-problem-1ce823be24c9
+
+Alternative 5: WebComponents
