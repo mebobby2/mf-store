@@ -1,8 +1,12 @@
-# mf-store
+# Micro-Frontend Store
 
 ## Requirements
 * node
 * docker
+
+## Integration Options
+### Backend (git branch integration-backend)
+Use the back-end to fetch the other apps. We are using an express server, but a more robust way is to use nginx SSI.
 
 ## Notes
 ### create-react-app Commands
