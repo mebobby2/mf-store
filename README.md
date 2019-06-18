@@ -12,6 +12,9 @@ The problem with this approach is if one of the microservices takes a long time 
 ### iFrame (git branch integration-iframe)
 Solves the problem of a slow service holding the entire page up. However, the bad part is that you cannot share the stylesheet,loaded libraries, communication will be harder, etc,
 
+### Client Side JS (integration-client-side-js)
+Loads the UI for each microservice using Ajax on the browser. Also solves the problem of a slow service holding the entire page up. However, because it's client side rendering, you may lose SEO. However, Google SEO Crawler is getting better at processing JS these days...
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
