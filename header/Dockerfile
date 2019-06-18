@@ -5,6 +5,8 @@ RUN npm install
 
 COPY . .
 
+ENV PUBLIC_URL http://localhost:3000/header
+
 RUN npm run build
 RUN npm run transpile
 
