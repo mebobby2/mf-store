@@ -18,6 +18,11 @@ Loads the UI for each microservice using Ajax on the browser. Also solves the pr
 ### Progressively stream content to browser (integration-progressive-loading-backend)
 Send chunks of data from the server as it loads them from each of the microservices. The bad part is that they have to load in order, different from the previous example were the cart would load before the products list.
 
+### Web Components (integration-web-components)
+Bad parts:
+* WebComponents are still not fully supported in all browsers, with Mozilla holding back HTML imports, so you will need polyfills, more code for the user to load.
+* JavaScript bundle has to load first and register the components in order for the DOM to load, which means that to gain the advantages of server-side rendering you'll probably need to be more clever.
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
