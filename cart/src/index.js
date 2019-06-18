@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 
 class Cart extends HTMLElement {
-  attachCallback() {
+  connectedCallback() {
     ReactDOM.render(<App />, this.createShadowRoot());
   }
 }
 
-document.registerElement('microfrontends-cart', Cart);
+window.customElements.define('microfrontends-cart', Cart);

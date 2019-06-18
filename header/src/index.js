@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 
 class Header extends HTMLElement {
-  attachCallback() {
+  connectedCallback() {
     ReactDOM.render(<App />, this.createShadowRoot());
   }
 }
 
-document.registerElement('microfrontends-header', Header);
+window.customElements.define('microfrontends-header', Header);
