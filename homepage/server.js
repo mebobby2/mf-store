@@ -1,8 +1,15 @@
 const express = require('express');
 const server = express();
-const request = require('request');
+const proxy = require('http-proxy-middleware');
 
 server.set('view engine', 'ejs');
+
+const createProxy = (path, target) =>
+  server.use(path, proxy({ target, changeOrigin: true, pathRewrite: {[`^${path}`]: ''} }));
+
+createProxy('/header', 'http://localhost:8080');
+createProxy('/products-list', 'http://localhost:8081');
+createProxy('/cart', 'http://localhost:8082');
 
 server.get('/', (req, res) => res.render('index'));
 
