@@ -23,6 +23,12 @@ Bad parts:
 * WebComponents are still not fully supported in all browsers, with Mozilla holding back HTML imports, so you will need polyfills, more code for the user to load.
 * JavaScript bundle has to load first and register the components in order for the DOM to load, which means that to gain the advantages of server-side rendering you'll probably need to be more clever.
 
+Have trouble getting this integration to work. Kept getting error:
+```
+index.js:12 Uncaught DOMException: Failed to execute 'define' on 'CustomElementRegistry': this name has already been used with this registry
+```
+when loading all 3 of the webcomponents on the page. No time to debug.
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
