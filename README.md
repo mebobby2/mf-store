@@ -4,6 +4,11 @@
 * node
 * docker
 
+## Integration Options
+### Backend (git branch integration-backend)
+Use the back-end to fetch the other apps. We are using an express server, but a more robust way is to use nginx SSI.
+The problem with this approach is if one of the microservices takes a long time to load - it will hold up the entire page.
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
