@@ -1,7 +1,7 @@
 # ProductsList microservice
 
 ## Build
-docker build . -t header
+docker build . -t products-list
 
 ## Run
-docker run -t -e PORT=8080 -p 8080:8080 header
+docker run -t -e PORT=8081 -p 8081:8081 products-list
