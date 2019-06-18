@@ -15,6 +15,9 @@ Solves the problem of a slow service holding the entire page up. However, the ba
 ### Client Side JS (integration-client-side-js)
 Loads the UI for each microservice using Ajax on the browser. Also solves the problem of a slow service holding the entire page up. However, because it's client side rendering, you may lose SEO. However, Google SEO Crawler is getting better at processing JS these days...
 
+### Progressively stream content to browser (integration-progressive-loading-backend)
+Send chunks of data from the server as it loads them from each of the microservices. The bad part is that they have to load in order, different from the previous example were the cart would load before the products list.
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
