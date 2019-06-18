@@ -9,6 +9,9 @@
 Use the back-end to fetch the other apps. We are using an express server, but a more robust way is to use nginx SSI.
 The problem with this approach is if one of the microservices takes a long time to load - it will hold up the entire page.
 
+### iFrame (git branch integration-iframe)
+Solves the problem of a slow service holding the entire page up. However, the bad part is that you cannot share the stylesheet,loaded libraries, communication will be harder, etc,
+
 ## Notes
 ### create-react-app Commands
 #### npm run build
