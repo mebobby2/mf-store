@@ -5,7 +5,7 @@ RUN npm install
 
 COPY . .
 
-ENV PUBLIC_URL http://localhost:3000/productsList
+ENV PUBLIC_URL http://localhost:3000/products-list
 
 RUN npm run build
 RUN npm run transpile
