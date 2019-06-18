@@ -42,4 +42,6 @@ npm packages for this to work:
 Alias for ```NODE_ENV=production node server.js```. We are are just runing server.js with node. Notice we are not transpiling server.js in anyway, so if you look inside server.js, we are not using ES6 imports (import example from 'example') but using CommonJS imports (const package = require('module-name')) which is the standard used by node for working with modules.
 
 ## Upto
-https://medium.com/@_rchaves_/building-microfrontends-part-ii-joining-apps-together-dfa1b6f17d3e
+https://medium.com/@_rchaves_/building-microfrontends-part-iii-public-path-problem-1ce823be24c9
+
+Alternative 5: WebComponents
