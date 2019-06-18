@@ -1,8 +1,7 @@
 # Header microservice
 
+## Build
+docker build . -t header
+
 ## Run
-```
-npm run build
-npm run transpile
-npm run start:prod
-```
+docker run -t -e PORT=8080 -p 8080:8080 header

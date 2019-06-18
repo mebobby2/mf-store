@@ -1,5 +1,9 @@
 # mf-store
 
+## Requirements
+* node
+* docker
+
 ## React-Create-App notes
 ### Commands
 #### npm run build
